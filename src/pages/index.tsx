@@ -6,7 +6,7 @@ import { DefaultSeo } from "next-seo"
 export async function getStaticProps(): Promise<HomeGetStaticProps> {
   const supabaseAdmin = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL as string,
-    process.env.SUPABASE_SERVICE_ROLE_KEY as string
+    process.env.NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY as string
   )
   const { data: images, error } = await supabaseAdmin.from("images").select("*").order("id", { ascending: true })
 
