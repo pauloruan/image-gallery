@@ -1,13 +1,13 @@
-import { BlurImage } from "@components/BlurImage";
-import { createClient } from "@supabase/supabase-js";
-import type { HomeGetStaticProps, ImageProps, ImagesProps } from "@types";
-import { DefaultSeo } from 'next-seo';
-
+import { BlurImage } from "@components/BlurImage"
+import { createClient } from "@supabase/supabase-js"
+import type { HomeGetStaticProps, ImageProps, ImagesProps } from "@types"
+import { DefaultSeo } from "next-seo"
 
 export async function getStaticProps(): Promise<HomeGetStaticProps> {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY as string
-  const supabaseAdmin = createClient(supabaseUrl, supabaseKey)
+  const supabaseAdmin = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL as string,
+    process.env.SUPABASE_SERVICE_ROLE_KEY as string
+  )
   const { data: images, error } = await supabaseAdmin.from("images").select("*").order("id", { ascending: true })
 
   if (error) {
