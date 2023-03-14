@@ -32,7 +32,7 @@ export default function Home(props: ImagesProps): JSX.Element {
           site_name: "Image Gallery",
           images: [
             {
-              url: "/og-image.png",
+              url: "https://image-gallery-pr.vercel.app/og-image.png",
               width: 1280,
               height: 800,
               alt: "Image Gallery with Next.js and Tailwind CSS",

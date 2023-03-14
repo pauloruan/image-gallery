@@ -4,17 +4,17 @@ import { type } from "os";
 export const SEO: DefaultSeoProps = {
   title: "Image Gallery",
   description: "Image Gallery with Next.js and Tailwind CSS",
-  canonical: "",
+  canonical: "https://image-gallery-pr.vercel.app",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "",
+    url: "https://image-gallery-pr.vercel.app",
     site_name: "Image Gallery",
     title: "Image Gallery",
     description: "Image Gallery with Next.js and Tailwind CSS",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://image-gallery-pr.vercel.app/og-image.png",
         width: 1280,
         height: 800,
         alt: "Image Gallery with Next.js and Tailwind CSS",
@@ -25,7 +25,7 @@ export const SEO: DefaultSeoProps = {
   additionalLinkTags: [
     {
       rel: "icon",
-      href: "/favicon.ico"
+      href: "https://image-gallery-pr.vercel.app/favicon.ico"
     }
   ]
 };
